@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script type="text/javascript">
+/*         var x = 100;
+        x.a = 500; // primitive type doesnt have scope hence cannot be extended
+        console.log(typeof(x)); 
+
+        obj1 = new Object();  // reference type have scope and can be extended
+        obj1.b = 750;
+        console.log(obj1.b); */
+
+        // refered by value and referred by reference
+        // var a=1000;
+        // var b=a;   //referred by value
+        // console.log(a);  //1000
+        // console.log(b);  //1000
+
+        // a=5000;
+        // console.log(a);  //5000
+        // console.log(b);  //1000
+
+
+        obj1 = new Object();
+        obj2 = obj1; //referred by reference
+        obj1.x = 500;
+        console.log(obj1.x);  //500
+        console.log(obj2.x);  //500
+        obj2.x = 2000;
+        console.log(obj2.x);  //2000
+        console.log(obj1.x);  //2000
+        obj2.y=5000;
+        console.log(obj2.y);  //5000
+        console.log(obj1.y);  //5000
+
+
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

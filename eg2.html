@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+    function xyz(){
+        // var x = 100;
+        // console.log(x);
+
+        with(document.location){  // Non-lexical scope
+            var x = 500;
+        }
+        console.log(x); // [with, xyz, window]  scope change augmentation -SCA  first scope is referred as activation object
+    }                   // with stmt hijacks the scope chain
+                        // writing with stmt is anti-pattern
+    xyz();
+</script>
+</head>
+<body>
+    
+</body>
+</html>

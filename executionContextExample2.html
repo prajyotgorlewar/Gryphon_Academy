@@ -8,8 +8,10 @@
         var color = "blue";
         function changeColor(){
             var anotherColor = "red"; // This will throw an error because 'anotherColor' is not defined in the global scope.
-            function swapColor(){
-                var tempColor = anotherColor;
+            function swapColor(){       //[swapColor, changeColor, window]]  scope change augmentation -SCA  first scope is referred as activation object
+                var tempColor = anotherColor; // all scopes avaialbe for search in scope chain are called execution context
+                // narrower scope has more privilege than wider scope
+                // the more priviledge the scope the more memory is consumed
                 anotherColor = color;
                 color = tempColor; 
             }

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+    // var name="the window";
+    // var Object = {
+    //     name:"my object",
+    //     getName: function() { // closure = nested function declaration
+    //         var that = this;
+    //         return function() {
+    //             return that.name;
+    //         };
+    //     },
+    // };
+    // console.log(Object.getName()()); 
+
+
+    var name = "the window";
+        var Object = {
+            name: "my object",
+            getName: function () { // closure = nested function declaration
+                    return this.name;
+            },
+        };
+        console.log(Object.getName()); 
+</script>
+</head>
+<body>
+    
+</body>
+</html>
