@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script type="text/javascript">
+
+        function printSong() {
+            console.log("the global Object");
+        }
+
+        const jukeBox = {
+            songs: [
+                {
+                    title: "Wanna Be Startin' Somethin'",
+                    artist: "Michael Jackson",
+                },
+                {
+                    title: "Billie Jean",
+                    artist: "Michael Jackson",
+                },
+                {
+                    title: "Smooth Criminal",
+                    artist: "Michael Jackson",
+                }
+            ],
+
+            printSong: function () {
+                this.songs.forEach((song) => {
+                    console.log(song.title + " - " + song.artist);
+                });
+            },
+            printSongs: function () {
+              this.songs.forEach((song)=>this.printSong(song));
+            },
+        };
+
+        jukeBox.printSongs(); 
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
