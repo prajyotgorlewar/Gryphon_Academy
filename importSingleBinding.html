@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="module">
+        import x from "./exportingModules.js"; // Importing a defalt binding
+        import * as myNameSpace from "./exportingModules.js" // binding cannot be utilised conditionally, it must be at the top level of the module
+        console.log(myNameSpace.sum(1,myNameSpace.magicNumber));
+        console.log(myNameSpace.multiply(2,1));
+        console.log(myNameSpace.subtract(2,4));
+        console.log(myNameSpace.color);
+        myNameSpace.setName("Yellow");
+        console.log(myNameSpace.color); 
+        console.log(x(10, 2)); // Using the imported default function
+        color = "blue"; // This will throw an error because 'color' is a constant imported from another module.
+    </script>
+
+</body>
+</html>

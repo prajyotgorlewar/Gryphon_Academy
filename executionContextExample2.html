@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        var color = "blue";
+        function changeColor(){
+            var anotherColor = "red"; // This will throw an error because 'anotherColor' is not defined in the global scope.
+            function swapColor(){
+                var tempColor = anotherColor;
+                anotherColor = color;
+                color = tempColor; 
+            }
+            swapColor();
+        }
+        changeColor();
+        console.log("Color is now" + color); // This will log "red" if the function executed correctly
+    </script>
+</head>
+<body>
+</body>
+</html>

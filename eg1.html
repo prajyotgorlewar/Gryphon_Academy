@@ -10,7 +10,7 @@
 <body>
     <script type="text/javascript">
 
-        if (true) {             // Non lexical scope -> conditional stmt and loops
+/*         if (true) {             // Non lexical scope -> conditional stmt and loops
             const x = 100;      // Only functons and objects are lexical scopes
                                 // let stmt is mutable
             x=200;
@@ -26,7 +26,20 @@
 
         const n = function b(){
             return "Hello World";
-        }
+        } */
+
+        // function abc(){   //function declaration hoisting causes lateny at runtime
+        //     console.log("abc function invoked");
+        // }
+        // abc();
+
+
+        // xyz = function xyz() {  // function expression, not hoisted
+        //     console.log("xyz function invoked");
+        // }
+        // xyz(); 
+
+
 
 
     </script>
