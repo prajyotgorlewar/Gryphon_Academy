@@ -5,11 +5,13 @@
          function doSomething(){
             this.x = 10;
             this.y = 20;
+            var z = 30;
          }
 
          inst1 = new doSomething();
          console.log(inst1.x); // undefined
          console.log(inst1.y); // undefined
+         console.log(inst1.z); // undefined
 </script>
 </head>
 <body>
