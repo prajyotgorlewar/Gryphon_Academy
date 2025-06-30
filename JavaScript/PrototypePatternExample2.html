@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+    function Person(){}
+    
+    // Performance oriented
+    Person.prototype = {  // Overwriting the prototype of Person 
+        // Initialise prototype properties
+        constructor: Person, // justify the constructor keyword - overrides constructor keyword in window
+        name:"Nicolas",
+        age:29,
+        job:"Software Engineer",
+        friends: ["Greg", "John", "Michael"], //antipattern - should not be an array
+        sayName: function() {
+            console.log(this.name);
+        }
+    };
+
+    //Prototype should not contain other referece types like arrays or objects other than functions
+
+    var friend = new Person();
+
+    // not performance oriented
+    Person.prototype.name = "Greg"; // Changing the prototype property after instantiation
+    Person.prototype.age = 27; // Changing the prototype property after instantiation
+
+    var person1 = new Person();
+    var person2 = new Person();
+
+    person1.friends.push("shelby");
+
+    console.log(person1.friends); // ["Greg", "John", "Michael", "shelby"]
+
+    friend.sayName(); 
+    console.log(friend.age); // "Greg" - reflects the change in prototype
+    console.log(friend.constructor == Person); // [friend, Person.prototype, window]
+
+</script>
+</head>
+<body></body>
+</html>

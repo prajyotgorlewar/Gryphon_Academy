@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script text="text/javascript">
+
+        function createPerson(name, age, job) {
+            var name = "Nicolas";
+            var age = 29;
+            var job = "Software Engineer";
+            o = new Object();
+            o.name = name;
+            o.age = age;
+            o.job = job;
+            o.sayName = function () {
+                console.log(this.name);
+            };
+            return o;
+        }
+
+        var person1 = createPerson("Nicolas", 29, "Software Engineer");
+        var person2 = createPerson("Greg", 27, "Doctor");
+
+        // meaning of line number 21
+        /* person1{
+        this.name = name;
+        this.age = age;
+        this.job = job; 
+        this.sayName = function() {
+            console.log(this.name);
+        };
+        } */
+
+        // person1.sayName();
+        // console.log(person1.name);
+        // console.log(person1.age);
+        // console.log(person1.job);
+
+        // meaning of line number 22
+        /* person2{
+        this.name = name;
+        this.age = age;
+        this.job = job;
+        this.sayName = function() {
+            console.log(this.name);
+        };
+        } */
+
+        //Biggest issue with factory pattery is that methods from common class are duplicated in each instance
+
+        //person2.sayName();
+
+
+
+        console.log(person1.sayName == person2.sayName); // false -- duplication of methods
+        console.log(person1 instanceof createPerson); // false -- person1 was not created by new keyword
+        console.log(person2 instanceof createPerson); // false -- person2 was not created by new keyword
+        console.log(person1.constructor == createPerson); // false -- person1 was not created by new keyword
+        // console.log(person1 instanceof Object);
+
+    </script>
+</head>
+
+<body></body>
+
+</html>

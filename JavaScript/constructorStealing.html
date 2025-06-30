@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+    function SuperType(){
+        this.colors = ["red", "green", "blue"];
+    }
+
+    function SubType(){
+        SuperType.call(this); // Constructor Stealing
+        // this.colors = ["red", "green", "blue"];
+
+        // var x = new SuperType(); // Constructor Stealing
+        // return x; // Return the instance of SuperType
+    }
+
+    var instance1 = new SubType();
+
+    instance1.colors.push("black");
+    console.log(instance1.colors); // ['red', 'green', 'blue', 'black']
+
+    var instance2 = new SubType();
+    console.log(instance2.colors); // ['red', 'green', 'blue']
+
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>

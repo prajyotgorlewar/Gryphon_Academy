@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script text="text/javascript">
+
+        // function createPerson() {  // prototype{sayName}
+        //     this.name = name;
+        //     this.age = age;
+        //     this.job = job;
+        // }
+
+        // // prototype is shared memory across all instances
+        // createPerson.prototype.sayName = function () {
+        //     console.log(this.name);
+        // };
+
+        // // Constructor is a static clone and protype is a dynamic lookup available to all instances
+        // var person1 = new createPerson("Nicolas", 29,"Software Engineer"); // new keyword does two things: clones the function property and also sees the prototype
+        // var person2 = new createPerson("Greg", 27, "Doctor");
+        // console.log(person1 instanceof createPerson); // true
+
+        // person1.sayName();
+        // person2.sayName();
+
+        // console.log(person1.sayName == person2.sayName); // true -- no duplication of methods
+        // console.log(person1 instanceof createPerson); // true -- person1 is an instance of createPerson
+        // console.log(person2 instanceof createPerson); // true -- person2 is an instance of createPerson
+        // console.log(person1.constructor == createPerson); // true -- person1's constructor is createPerson
+        // console.log(person1 instanceof Object); // true -- person1 is an instance of Object
+
+        // class Rectangle{      // class cannot be overwritten but functions can be overwritten
+        //     constructor(length, width){
+        //         this.length = length;
+        //         this.width = width;
+        //     }
+
+        //     getTotal(){
+        //         console.log("get the total value");
+        //     }
+        // }
+
+
+
+        // console.log(typeof Rectangle); 
+        // var inst1 = new Rectangle(80, 120);
+        // console.log(inst1.length);
+        // console.log(inst1.width);
+        // console.log(typeof Rectangle.prototype.getTotal); 
+
+        // function Date() {  // prototype{getHours, getMinutes, getSeconds}
+        // }
+
+        d = new Date();
+        console.log(d.getHours());
+        console.log(d.getMinutes());
+        console.log(d.getSeconds());
+        console.log(typeof Date.prototype.getHours); // function
+        console.log(typeof String.prototype.substring); // function
+        console.log(typeof Array.prototype.push); // function
+
+
+        String.prototype.substring = function () {
+            return this.indexOf(text) == 0;
+        }
+
+        var msg = "Hello World";
+        console.log(msg.startsWith("Hello")); // true
+        //Native prototype pattern : adding a method to the String prototype -- antipattern
+        
+
+
+
+
+
+    </script>
+</head>
+
+<body></body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+    function SuperType(){  // prototype{getSuperValue}
+        this.colors = ['red', 'green', 'blue'];
+    }
+
+    SuperType.prototype.getSuperValue = function(){
+        return this.property;
+    };
+
+    function SubType(){  // prototype{getSubValue}
+    }
+
+    SubType.prototype = new SuperType();  // Prototype Chaining
+    
+    SubType.prototype.getSubValue = function(){
+        return this.subProperty;
+    };
+
+    // var instance = new SubType();
+    // console.log(instance.getSuperValue()); // [instance, SubType.prototype]
+
+    // console.log(instance.getSuperValue()); // true
+
+    // console.log(instance instanceof Object);
+    // console.log(instance instanceof SuperType); // true
+    // console.log(instance instanceof SubType); // true
+
+    // console.log(Object.prototype.isPrototypeOf(instance)); // true
+    // console.log(SuperType.prototype.isPrototypeOf(instance)); // true
+    // console.log(SubType.prototype.isPrototypeOf(instance)); // true
+
+    var instance1 = new SubType();
+    instance1.colors.push('black');
+    console.log(instance1.colors); // ['red', 'green', 'blue', 'black']
+
+    var instance2 = new SubType();
+    console.log(instance2.colors);  // proble can be resolved with constructor stealing pattern
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>

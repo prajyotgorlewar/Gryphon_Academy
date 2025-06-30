@@ -1,0 +1,5 @@
+onClick
+open, save, close etc
+GET, POST, PUT, PATCH, UPDATE, DELETE etc
+
+//function which are bound to happening of event are called callback functions

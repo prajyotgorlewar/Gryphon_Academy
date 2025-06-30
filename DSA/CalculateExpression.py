@@ -1,7 +1,7 @@
 def calculateExpression(expression):
     numberStack = []
     operatorStack = []
-    precedence = {'/':1, '*':1, '+':0, '-':0}
+    precedence = {'(':2,'/':1, '*':1, '+':0, '-':0}
 
     i=0
     while i < len(expression):

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+
+    // Destructuring Assignment in JavaScript
+    const [x,y,z] = ["apples", "bananas", "cherries"];
+
+    console.log(x); // "apples"
+    console.log(y); // "bananas"
+    console.log(z); // "cherries"
+
+
+    const smoothie = {
+        fats:["avocado", "coconut oil"],
+        liquids:["almond milk", "coconut water"],
+        greens:["spinach", "kale"],
+        fruits:["banana", "berries"],
+    };
+
+    console.log(typeof(smoothie)); // "object"
+
+    const { fats } = smoothie;
+    console.log(fats); // ["avocado", "coconut oil"]
+
+    const containSpinach = ({ fats}) =>
+    {
+        console.log(fats); // ["avocado", "coconut oil"]
+    };
+
+    containSpinach(smoothie); 
+
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>
