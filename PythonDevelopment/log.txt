@@ -1,0 +1,9 @@
+
+2025-07-03 11:41:26.046550 calling Evaluate with arguments (3456, 578, '*') and {}
+2025-07-03 11:41:26.046550 Return value of Evaluate : 1997568
+2025-07-03 11:42:25.128615 calling Evaluate with arguments (456, 978, '/') and 
+2025-07-03 11:42:25.128615 Return value of Evaluate : 0.4662576687116564
+2025-07-03 11:42:56.165784 calling Evaluate with arguments (25, 6, '/') 
+2025-07-03 11:42:56.165784 Return value of Evaluate : 4.166666666666667
+2025-07-03 12:22:30.314438 calling Evaluate with arguments (456, 567, '/') 
+2025-07-03 12:22:30.314438 Return value of Evaluate : 0.8042328042328042
