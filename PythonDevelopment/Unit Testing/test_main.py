@@ -4,16 +4,17 @@ import os
 # sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__),"..")))
 
 import unittest
-from src.main import BankAccount, NegativeAmountError, InsufficientFundsError
+from main import BankAccount, NegativeAmountError, InsufficientFundsError
 
 
 class TestBankAccount(unittest.TestCase):
     def setUp(self):
         print("Setting up the test...")
-        self.wallet = BankAccount("josh", 1000.0)
+        # self.wallet = BankAccount("josh", 1000.0)
         
     # test inital deposit
     def test_inital_deposit(self):
+        self.wallet = BankAccount("josh", 1000.0)
         self.assertEqual(self.wallet.balance, 1000.0)
         self.assertTrue(self.wallet.balance >= 0)
         
@@ -53,8 +54,8 @@ class TestBankAccount(unittest.TestCase):
         
         
     def tearDown(self) -> None:
-        self.wallet = None
-
+        # self.wallet = None
+        pass
 
 if __name__ == "__main__":
     unittest.main()
