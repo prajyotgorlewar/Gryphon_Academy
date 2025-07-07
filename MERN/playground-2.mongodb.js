@@ -43,6 +43,7 @@ db.employees.insertOne({
 db.employees.find({});
 
 db.employees.find({ "address.city": "Nagpur" });
-db.employees.find({ "skills.0": "JS" }, { "address.city": "Nagpur" });
+db.employees.find({ "skills": "JS", "address.city": "Nagpur" });
+db.employees.find({ skills: { $all: ["JS", "HTML", "CSS"] } });
 
 
