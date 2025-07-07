@@ -1,0 +1,28 @@
+DataBase:
+
+1. IP : where the db is running
+2. port : Mongodb 27017
+
+sql vs nosql:
+1. Sql databases like mysql and oracle they have strict constraints like foreign key and primary key they work best in systems like library management sysms, employee managements systems and even in commerce management systems.
+2. In case of no sql there i sno schema and no contrainsts example mongodb and mongodb atlas.
+3. however to connect a mern stack applicaion to mongodb we need an extra layer of mongoose.
+
+Traditionallly we create a dataase and the the table then insert records. --DD firt approach
+As for now we just create the database and tale are created programatically using ORMs
+We also nedd migration tools
+
+Real life Analogy:
+RDBMS(SQL)          MongoDB(NoSql)
+database            database
+table               collection
+row                 document
+column              field
+
+
+Every document that you insert has a specific id called object Id
+
+Q. Create a collection department with id and department name insert 4 records display all the records and find a record where department name is sales.
+
+We don not delete the records but we do a soft delete where a boolean variable isActive is set to false.
+

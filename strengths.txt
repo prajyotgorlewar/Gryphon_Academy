@@ -22,8 +22,12 @@ weaknesses:
 -negative thinking
 
 Intro:
-Hi, I'm Prajyot Gorlewar, currently pursuing my Bachelor's in Computer Science with a specialization in Data Science at RCOEM, Nagpur. I’ve worked on impactful Android projects like CampusNav, a GPS-free multi-floor campus navigation app with student-faculty communication, and a video chat app with calling features. Outside academics, I’m passionate about game development, where I enjoy combining creativity with logic to build engaging experiences.
+-Hi, I'm Prajyot Gorlewar, a final-year Computer Science student at RCOEM Nagpur, specializing in Data Science
+-I come from a family of 4 which includes my mother, father, younger sister and me
+-I'm currently interning as a software developer at HHT Technologies
+-Recently, I worked in a team to develop an Android app called CampusNav that helps college freshers and visitors navigate campuses without GPS
+-besides academics i have a strong passion for game development where i enjoy combining creativity with programming to make exiting games.
 
 
 Star:
-while making my project campus out team came across a serios hurdle which temporarily stopped our development process as our version control was messed up due to overriding commits which caused deletion of almost 20% of the project and our project seminar was the next day to resolve it our team of four connected on meet and check every commit till the midnight and solved the issue using various version control commands
+so while making my project campusnav our team came across a serious hurdle which temporarily stopped our development process as our version control was messed up due to overriding commits which caused deletion of almost 20% of the project and our project seminar was the next day to resolve it our team of four connected on meet and check every commit till the midnight and solved the issue using various version control commands

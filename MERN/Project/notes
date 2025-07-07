@@ -1,0 +1,4 @@
+ 1   Primitive Data types are allocated on the stack , their values do no change example interger, float character and boolean also strinng in javaScript.
+ 2   Non primitive data types are allocated on the heap and are dynamic, their values can change example arrays and objects. In this objects nedd to to be deleted using destructors or garbage collector.
+ 3   Browswer has a support for HTML, CSS, XML, javaScript and WebAssembly(WASM).
+ 4   Abililty OF javaScript TO READ FROM databases using node.js and front end frameworks like React, Angular, Vue.js.
