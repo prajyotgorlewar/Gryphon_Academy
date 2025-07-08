@@ -1,49 +1,24 @@
-// db.createCollection("employees");
+db.emp.insertMany([
+  { name: "Amit", age: 30, city: "Delhi", salary: 40000 },
+  { name: "Neha", age: 27, city: "Mumbai", salary: 50000 },
+  { name: "Rahul", age: 35, city: "Delhi", salary: 60000 },
+  { name: "Priya", age: 22, city: "Bangalore", salary: 45000 }
+]);
 
-// db.employees.insertMany([
-//     { eid: 102, ename: "pajyot", department: "HR1" },
-//     { eid: 103, ename: "prajyot", department: "HR2" },
-//     { eid: 104, ename: "prjyot", department: "HR3" }
-// ]);
+// 1. Update Rahul's salary to 65000.
+db.emp.updateOne({ name: "Rahul" }, { $set: { salary: 65000 } });
 
-// db.employees.find({});
-// db.employees.find({ ename: "prajyot" });
+// 2. Increase salary by 3000 for all employees in Bangalore.
+db.emp.updateMany({ city: "Bangalore" }, { $inc: { salary: 3000 } });
 
+// 3. Rename the field city to location.
+db.emp.updateOne({}, { $rename: { city: "location" } });
 
-// Create collection
-// db.createCollection("department");
+// 4. Remove the age field from all documents.
+db.emp.updateMany({}, { $unset: { age: 1 } });
 
-// Insert data
-// db.department.insertMany([
-//     { did: 100, dname: "HR" },
-//     { did: 101, dname: "Sales" },
-//     { did: 102, dname: "Payroll" },
-//     { did: 103, dname: "Accounts" },
-// ])
+// 5. Delete the employee named Priya.
+db.emp.deleteOne({ name: "Priya" });
 
-// // Display all data
-// db.department.find({});
-
-// // Find a record where dname is "Sales"
-// db.department.find({ dname: "Sales" });
-
-
-db.employees.insertOne({
-    name: "Prajyot",
-    age: 22,
-    isActive: true,
-    skills: ["JS", "HTML", "CSS", "React", "Node", "MongoDB"],
-    address: {
-        city: "Nagpur",
-        pincode: 440013
-    },
-    joinedOn: new Date("2025-01-01")
-});
-
-db.employees.find({});
-
-db.employees.find({ "address.city": "Nagpur" });
-db.employees.find({ "skills": "JS", "address.city": "Nagpur" });
-db.employees.find({ skills: { $all: ["JS", "HTML", "CSS"] } });
-
-
+// 6. Delete all employees with salary less than 45000.
+db.emp.deleteMany({ salary: { $lt: 45000 } });

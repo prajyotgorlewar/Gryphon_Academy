@@ -25,4 +25,22 @@ Every document that you insert has a specific id called object Id
 Q. Create a collection department with id and department name insert 4 records display all the records and find a record where department name is sales.
 
 We don not delete the records but we do a soft delete where a boolean variable isActive is set to false.
+Mongodb find has 2 parameters:
+1. filters - select name, ge from tablename where age great than 20
+2. projection - select name, age from tablename
+By default object id is included in the output
 
+
+Mongoose is an ODM(Object data mapping) it sits between your application and mongodb.
+it helps to create schemas and convert schemas into models so that we can fire queries tot his models.
+
+.env file contains sensitive information like connection string, secret keys
+1. Add a file databse.js
+2. Enter connection string in .env file
+asyb abd await are yied to make sure that the code is executed in a synchronous manner.
+
+async function is a function that returns a promise.
+
+1.To perform CRUD operations first always establish a database connect
+2. Create a schema convert it into a models
+3. Export the model where the CRUD operations will be performed

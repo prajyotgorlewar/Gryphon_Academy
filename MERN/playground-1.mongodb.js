@@ -1,43 +1,48 @@
-/* global use, db */
-// MongoDB Playground
-// Use Ctrl+Space inside a snippet or a string literal to trigger completions.
-
-const database = 'users';
-const collection = 'collection0';
-
-// Create a new database.
-use(database);
-
-// Create a new collection.
-db.createCollection(collection);
-
-// The prototype form to create a collection:
-/* db.createCollection( <name>,
-  {
-    capped: <boolean>,
-    autoIndexId: <boolean>,
-    size: <number>,
-    max: <number>,
-    storageEngine: <document>,
-    validator: <document>,
-    validationLevel: <string>,
-    validationAction: <string>,
-    indexOptionDefaults: <document>,
-    viewOn: <string>,
-    pipeline: <pipeline>,
-    collation: <document>,
-    writeConcern: <document>,
-    timeseries: { // Added in MongoDB 5.0
-      timeField: <string>, // required for time series collections
-      metaField: <string>,
-      granularity: <string>,
-      bucketMaxSpanSeconds: <number>, // Added in MongoDB 6.3
-      bucketRoundingSeconds: <number>, // Added in MongoDB 6.3
+db.employees.insertMany([
+    {
+        name: "Amit",
+        age: 28,
+        city: "Delhi",
+        skills: ["Node.js", "MongoDB", "Express"],
+        isActive: true
     },
-    expireAfterSeconds: <number>,
-    clusteredIndex: <document>, // Added in MongoDB 5.3
-  }
-)*/
+    {
+        name: "Meera",
+        age: 35,
+        city: "Mumbai",
+        skills: ["React", "Node.js"],
+        isActive: false
+    },
+    {
+        name: "Zara",
+        age: 24,
+        city: "Bangalore",
+        skills: ["Python", "Flask"],
+        isActive: true
+    }
+]);
 
-// More information on the `createCollection` command can be found at:
-// https://www.mongodb.com/docs/manual/reference/method/db.createCollection/
+
+// 1. Find employees aged less than 30.
+db.employees.find({ age: { $lt: 30 } });
+
+// 2. Find employees who are not from Delhi.
+db.employees.find({ city: {$ne:"Delhi"} });
+
+// 3. Find employees skilled in either React or MongoDB.
+db.employees.find({skills:{$in:["React","MongoDB"]}});
+
+// 4. Find employees who have both Node.js and MongoDB skills.
+db.employees.find({skills:{$all:["Node.js", "MongoDB"]}})
+
+// 5. Find all inactive employees.
+db.employees.find({ isActive: false });
+
+// 6. Find employees with exactly 3 skills.
+db.employees.find({ skills: { $size: 3 } });
+
+// 7. Find employees with age of type integer.
+db.employees.find({ age: { $type: "int" } });
+
+// 8. Find employees whose city is neither Delhi nor Mumbai.
+db.employees.find({ city: { $nin: ["Delhi", "Mumbai "]}});
