@@ -44,3 +44,28 @@ async function is a function that returns a promise.
 1.To perform CRUD operations first always establish a database connect
 2. Create a schema convert it into a models
 3. Export the model where the CRUD operations will be performed
+
+
+assignment:
+create an item table with item_id, item_name and rate.
+1-> create an item schema and convert it into item(table)
+2-> in app.js write crud
+
+now we have the entire code in app.js /index.js but we usually use this code to start the server so we move the code to service file
+
+MERN Stack
+1. MongoDB - MQL 
+2. Mongoose [Schema, Model, Query]
+Traditionallly: MVC - MODEL VIEW CONTROLLER
+[routes] [Controller] [Services(models)]->DB->JSON->POSTMAN
+3. Js(ES6)+Node.js(library)
+4. React.js
+
+Backend - building APIs
+JWT - JSON Web Token
+
+
+Monolithic application has  a frontend and backend inn the same folder
+REST full application or SAAS applicaion frontend is seperated from backend and connected using api layer.
+
+tHINGS THAT ARE ADDED TO EXPRESS APPLICATION TO MAKE IT INTELLIGENT AND HANDLE VARIOUS REQUEST IS CALLED MIDDLEWARES

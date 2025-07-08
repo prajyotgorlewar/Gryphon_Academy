@@ -1,0 +1,14 @@
+Asessment Day-2
+1. Explain what is MVC, Monolithic and RestAPIs
+2. what are different API status codes
+3. How do we connect with MySQL
+4. write code snippet for health check (default routes)
+5.  Write the student schema where address is (state, city, pin)
+6. What are middlewares in express and how are they used name some middlewares
+7. what is CORS how is it enables in app.js
+8. what is difference between MJS and CommonJS
+9. WRITE 3 FUNCTION IN js
+10. why are asyc and await used in Express
+11. create server in node js using http without express
+12. what are body-parsers, helmet, morgon, jest, mocha
+13. consider simple schema category (id, name) write RestAPIs to add and retrieve
