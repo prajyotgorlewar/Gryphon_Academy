@@ -10,3 +10,4 @@ in non hoisting as a function bvlaue is assigned to a variabl its contact change
 when you use a named function within an object the named variable are in context of the object, therefore it is not recommmended to use arrow functions.
 
 Callback function / Higher order function: passing an existing function to a new function to perform a small task.
+

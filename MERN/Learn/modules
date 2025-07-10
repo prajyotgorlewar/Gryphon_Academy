@@ -1,0 +1,9 @@
+List out commonn modules in any project
+1. Authetication and authorisation, registration, login, password forget SSON, OTP
+2. Payment gateway Integration
+3. Models, Controllers, Routes, Services architecture
+4. Model + ORM + CRUD
+5. JSON Web Tokens + Role based access control(RBAC)
+6. Admin Dashboard
+7. Unit test cases
+8. CI/CD pipelines
