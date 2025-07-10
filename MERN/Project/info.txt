@@ -69,3 +69,5 @@ Monolithic application has  a frontend and backend inn the same folder
 REST full application or SAAS applicaion frontend is seperated from backend and connected using api layer.
 
 tHINGS THAT ARE ADDED TO EXPRESS APPLICATION TO MAKE IT INTELLIGENT AND HANDLE VARIOUS REQUEST IS CALLED MIDDLEWARES
+
+

@@ -1,0 +1,12 @@
+Functions are first class citizens in JS.
+they are considered as objects.
+they can be passed as arguments to other functions.
+
+There are hoisted and non hoisted function: hoisted function can be called before it is declared.
+A non hoisted function is assigned like a variable
+in non hoisting as a function bvlaue is assigned to a variabl its contact changes
+
+
+when you use a named function within an object the named variable are in context of the object, therefore it is not recommmended to use arrow functions.
+
+Callback function / Higher order function: passing an existing function to a new function to perform a small task.
