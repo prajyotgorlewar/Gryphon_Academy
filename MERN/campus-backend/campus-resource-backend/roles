@@ -1,0 +1,13 @@
+admin and content creater will add blogs
+the user can only view the contents cannot add contents
+both the roles will - register and login
+                    - get authenticated
+
+Registration process
+    - user will enter the registration details and token will be generated
+    - user will login with email and password this time a new token will be sent
+    - this token will be used to identify the user for alll request and response
+Protected Routes - Specific routes will be prottected    
+
+
+In rbac we will not have crud operation from the user but registation and login

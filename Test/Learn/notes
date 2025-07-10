@@ -1,0 +1,9 @@
+using jwt
+
+1.install jwt
+2.create a scret key
+3.create a body
+4.then load the secret key from environment variables
+5.load from req.body and load secret key
+6.use jwt.sign to generate the encrypted token with a specified time interval
+7.
